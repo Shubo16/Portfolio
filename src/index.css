@@ -1,0 +1,96 @@
+@import url('non.geist');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  /* Light mode colors */
+  --lm-light-green: #7ca982;
+  --lm-dark-green: #243e36;
+  --lm-pale-green: #f1f7ed;
+  --lm-font-c: black;
+
+  /* Dark mode colors */
+  --dm-swamp-green: #1a1f16;
+  --dm-pine-green: #1e3f20;
+  --dm-lime-green: #345840;
+  --dm-font-c: white;
+
+  --accent-pink: rgb(219 39 119);
+}
+
+body {
+  background-color: --lm-pale-green;
+  font-family: 'Geist Variable';
+}
+
+#light {
+  background-color: #7ca982;
+}
+
+#dark {
+  background-color: #243e36;
+}
+/*  */
+.button-one .line {
+  transition: y 100ms ease-in   100ms, rotate 100ms ease-in 100ms,
+    opacity 0ms 200ms;
+
+  transform-origin: center;
+}
+
+.button-one[aria-expanded="true"] .line {
+  transition: y 150ms ease-in 150ms, rotate 150ms ease-in 150ms,
+    opacity 0ms 200ms;
+}
+
+.button-one[aria-expanded="true"] .top {
+  y: 45;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+  y: 45;
+}
+
+.button-one[aria-expanded="true"] .top {
+  rotate: 45deg;
+}
+
+.button-one[aria-expanded="true"] .middle {
+  opacity: 0;
+}
+
+.button-one[aria-expanded="true"] .bottom {
+  rotate: -45deg;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 10px;
+  background-color: var(--accent-pink);
+  width: 100%;
+  transform-origin: left center;
+  z-index: 1;
+}
+
+
+
+/* MAIN PROJECTS SECTION */
+.main{
+
+  display: flex;
+
+  height: 100vh;
+
+  align-items: center;
+
+  justify-content: center;
+
+}
+
+
+
