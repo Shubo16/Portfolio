@@ -7,15 +7,10 @@ import { AnimatePresence, motion } from "framer-motion"; // Removed useInView
 
 function Hero() {
   const mainContainerVar = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
-    },
-    // Added exit variant
-    exit: { opacity: 0, transition: { duration: 0.5 } },
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    exit: { opacity: 0, y: -50, transition: { duration: 0.6 } },
+
   };
 
   const childVariants = {

@@ -6,10 +6,10 @@ function MobileHeader() {
 
   const navLinks = [
     // { title: "Home", href: "/" },
-    { key: 1, title: "About Me", href: "/main-hero" },
-    { key: 2, title: "Work", href: "/projects" },
-    { key: 3, title: "projects", href: "/" },
-    { key: 4, title: "Contact me", href: "/Footer" },
+    { key: 1, title: "Home", href: "#home" },
+    { key: 2, title: "About Me", href: "#about" },
+    { key: 3, title: "projects", href: "#projects" },
+    { key: 4, title: "Contact me", href: "#footer" },
   ];
 
   const menuVars = {
@@ -110,6 +110,7 @@ function MobileHeader() {
                       key={index}
                       title={link.title}
                       href={link.href}
+                      toggleMobileNav={toggleMobileNav}
                     />
                   </div>
                 );
@@ -124,7 +125,7 @@ function MobileHeader() {
 
 export default MobileHeader;
 
-const MobileNavLink = ({ title, href }) => {
+const MobileNavLink = ({ title, href, toggleMobileNav }) => {
   const linkVar = {
     initial: {
       y: "-30svh",
@@ -144,9 +145,16 @@ const MobileNavLink = ({ title, href }) => {
   return (
     <motion.div
       variants={linkVar}
-      className="text-5xl uppercase text-black hover:text-pink-500 hover:scale-150"
+      className="text-5xl uppercase text-black scroll-smooth hover:text-pink-500 hover:scale-150"
     >
-      <a href={href}>{title}</a>
+      <a
+        href={href}
+        onClick={() => {
+          toggleMobileNav();
+        }}
+      >
+        {title}
+      </a>
     </motion.div>
-  );
+  )
 };

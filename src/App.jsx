@@ -2,8 +2,8 @@ import React, { createContext, useEffect, useState } from "react";
 import AnimationScroll from "./components/header/animationScroll";
 import DesktopHeader from "./components/header/DesktopHeader";
 import MobileHeader from "./components/header/MobileHeader";
-import Hero from "./components/main-hero/Hero";
-
+import HomeScreen from "./components/landing/HomeScreen";
+import Hero from "./components/about-me/Hero";
 import Cards2 from "./components/cards/Projects";
 
 import Footer from "./components/footer/footer";
@@ -39,8 +39,9 @@ function App() {
       <AnimationScroll />
       <div className={`App ${theme}`}>
         {isDesktop ? <DesktopHeader /> : <MobileHeader />}
-        <Hero/>
-        <Cards2/>
+        <HomeScreen />
+        <Hero />
+        <Cards2 />
         <Footer />
       </div>
     </ThemeContext.Provider>
