@@ -22,7 +22,7 @@ function Hero() {
   return (
     <section
       id="about" // Updated to meaningful ID
-      className="h-screen w-[100svw] bg-lm-pastel-green flex justify-center flex-col lg:flex-row xl:flex-row p-10 gap-20"
+      className="h-screen w-[100svw] flex justify-center flex-col lg:flex-row xl:flex-row p-10 gap-20"
     >
       <AnimatePresence> {/* If needed */}
         <motion.main
